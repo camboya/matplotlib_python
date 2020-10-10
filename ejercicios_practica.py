@@ -40,6 +40,20 @@ def ej1():
     # Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
 
+    plt.figure()
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    plt.plot(x,y, color='r', marker='^')
+    ax.set_title('y = x**2')
+    ax.set_ylabel("x")
+    ax.set_xlabel("y")
+    plt.show()
+
+ 
+    
+    
+   
+   
 
 def ej2():
     # Line Plot
@@ -65,6 +79,21 @@ def ej2():
     # Cada función dibujarla con un color distinto
     # a su elección
 
+    plt.figure()
+
+    fig=plt.figure()
+    ax = fig.add_subplot()
+    plt.plot(x,y1, color='r', marker='^')
+    plt.plot(x,y2, color='g')
+    ax.set_title('grafico de funcion')
+    ax.set_ylabel("valor de x")
+    ax.set_xlabel("valor de y")
+    ax.legend()
+
+    plt.show()
+    
+
+
 
 def ej3():
     # Scatter Plot
@@ -84,6 +113,20 @@ def ej3():
     # cada gráfico
 
     # Elegir un marker a elección
+
+    
+
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    plt.plot(x,y, color='b', marker='^')
+    ax.set_facecolor('whitesmoke')
+    ax.set_title('grafico de tangente')
+    ax.set_xlabel('valor de y')
+    ax.set_ylabel('valor de tanh(x)')
+
+    plt.show()
+
+
 
 
 def ej4():
@@ -123,11 +166,43 @@ def ej4():
 
     # Colocar una grilla a elección
 
+    fig = plt.figure()
+
+    ax1 = fig.add_subplot(2, 2, 1) 
+    ax2 = fig.add_subplot(2, 2, 2)  
+    ax3 = fig.add_subplot(2, 2, 3)
+    ax4 = fig.add_subplot(2, 2, 4)
+
+
+    ax1.plot(x, y1, color='purple', label='y=x**2')
+    ax1.set_facecolor('whitesmoke')
+    ax1.set_xlabel('Valor de x')
+    ax1.set_ylabel('Potencia cuadrada  x')
+    ax1.legend()
+    
+    ax2.plot(x, y2, color='brown', label='y=x**3')
+    ax2.set_xlabel('Valores de x')
+    ax2.set_ylabel('Potencia cúbica de x')
+    ax2.legend()
+    
+    ax3.plot(x, y3, color='orange', label='y=x**4')
+    ax3.set_xlabel('Valor de x')
+    ax3.set_ylabel('potencia cuarta de x')
+    ax3.legend()
+
+    ax4.plot(x, y4, color='yellow', label = 'y4 = np.sqrt(x)')
+    ax4.set_facecolor('lightblue')
+    ax4.set_xlabel('Valor de x')
+    ax4.set_ylabel('Raíz cuadrada de x')
+    ax4.legend()
+
+    plt.show()
+
+
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    ej1()
-    # ej2()
+    # ej1()
     # ej2()
     # ej3()
-    # ej4()
+    ej4()
